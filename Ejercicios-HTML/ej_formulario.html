@@ -1,43 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio Formulario</title>
-    <style>
-        form {
-            display: block;
-            margin-top: 0em;
-        }
-    </style>
-</head>
-<body>
-<!--Cree un Formulario con los campos que se proponen a continuacion-->
-<!--Agregue el atributo legend-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio Formulario</title>
+        <style>
+            form {
+                display:flex;
+                flex-direction: column;
+                margin-top: 0em;
+            }
+            fieldset {
+                display:flex;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Cree un Formulario con los campos que se proponen a continuacion-->
+        <!--Agregue el atributo legend-->
 
-<!--Si tienes dudas de como hacer un formulario, puedes consultar:
-    https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output-->
+        <!--Si tienes dudas de como hacer un formulario, puedes consultar:
+            https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output-->
 
-<h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
-Nombre:
-Apellido:
-Sexo: Masculino Femenino
-Edad:
-Email:
-Usuario:
-Password:
-Confirmar Password:
+        <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
 
-Tipo de servicio: Free / Standard / Premium
-Tema:
-Política
-Negocios
-Tecnología
-Salud
+        <form action="">
+            <fieldset>
+                <legend>Información básica</legend>
+                <label>Nombre:
+                    <input type="text" name="<input_>name" placeholder="Marcos" size="40"  maxlength="40" required>
+                </label>
 
-Agregue un comentario:
+                <label>Apellido:
+                    <input type="text" name="input_surname" placeholder="Martinez" size="40" maxlength="40" required>
+                </label>
 
-Boton de Enviar
+                <label>Sexo:
+                    <input type="radio" name="redio_gender" value="masculino">Masculino
+                    <input type="radio" name="radio_gender" value="femenino">Femenino
+                </label>
+                
+                <label>Edad:
+                    <input type="number" name="input_age" min="0" maxlength="3" required>
+                </label>
 
+                <label>Email:
+                    <input type="email" name="input_mail" placeholder="example@gmail.com" size="40" maxlength="40" required>
+                </label>
+            </fieldset>
 
-</body>
+            <fieldset>
+                <legend>Información LogIn</legend>
+                <label>Usuario:
+                    <input type="text" name="input_user" placeholder="marcos_martinez" size="40" maxlength="40" required>
+                </label>
+
+                <label>Password:
+                    <input type="password" name="input_password" size="40" maxlength="40" required>
+                </label>
+
+                <label>Confirmar Password:
+                    <input type="password" name="input_confirm_password" size="40" maxlength="40" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información extra</legend>
+                <label> Tipo de servicio:
+                    <select name="input_service_type" required>
+                        <option value="free">Free</option>
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </label>
+
+                <label>Tema:
+                    <input type="checkbox" name="tema1" value="politica">Política
+                    <input type="checkbox" name="tema2" value="negocios">Negocios
+                    <input type="checkbox" name="tema3" value="tecnologia">Tecnología
+                    <input type="checkbox" name="tema4" value="salud">Salud
+                </label>
+
+                <label>Agregue un comentario:
+                    <textarea name="comment" maxlength="500" rows="5">Escriba un comentario...</textarea>
+                </label>
+            </fieldset>
+
+            <button type="button">Enviar</button>
+        </form>
+    </body>
 </html>
