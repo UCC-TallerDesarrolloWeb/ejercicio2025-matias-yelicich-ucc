@@ -1,92 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ejercicio Formulario</title>
-        <style>
-            form {
-                display:flex;
-                flex-direction: column;
-                margin-top: 0em;
-            }
-            fieldset {
-                display:flex;
-                flex-direction: column;
-            }
-        </style>
-    </head>
-    <body>
-        <!--Cree un Formulario con los campos que se proponen a continuacion-->
-        <!--Agregue el atributo legend-->
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Formulario</title>
+</head>
+<body>
+    <h3>¡Suscríbase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
 
-        <!--Si tienes dudas de como hacer un formulario, puedes consultar:
-            https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output-->
+    <form action="">
+        <fieldset>
+            <legend>Información básica</legend>
 
-        <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
+            <p>
+                <label for="input_nombre">Nombre:</label>
+                <input type="text" name="input_name" id="input_nombre" placeholder="Marcos" size="40" maxlength="40" required>
+            </p>
 
-        <form action="">
-            <fieldset>
-                <legend>Información básica</legend>
-                <label>Nombre:
-                    <input type="text" name="<input_>name" placeholder="Marcos" size="40"  maxlength="40" required>
-                </label>
+            <p>
+                <label for="input_apellido">Apellido:</label>
+                <input type="text" name="input_surname" id="input_apellido" placeholder="Martinez" size="40" maxlength="40" required>
+            </p>
 
-                <label>Apellido:
-                    <input type="text" name="input_surname" placeholder="Martinez" size="40" maxlength="40" required>
-                </label>
+            <p>
+                Sexo:
+                <input type="radio" name="radio_gender" value="masculino" id="input-masculino">
+                <label for="input-masculino">Masculino</label>
 
-                <label>Sexo:
-                    <input type="radio" name="redio_gender" value="masculino">Masculino
-                    <input type="radio" name="radio_gender" value="femenino">Femenino
-                </label>
-                
-                <label>Edad:
-                    <input type="number" name="input_age" min="0" maxlength="3" required>
-                </label>
+                <input type="radio" name="radio_gender" value="femenino" id="input-femenino">
+                <label for="input-femenino">Femenino</label>
 
-                <label>Email:
-                    <input type="email" name="input_mail" placeholder="example@gmail.com" size="40" maxlength="40" required>
-                </label>
-            </fieldset>
+                <input type="radio" name="radio_gender" value="no_dicho" id="input-no-dicho">
+                <label for="input-no-dicho">Prefiero no decirlo</label>
+            </p>
 
-            <fieldset>
-                <legend>Información LogIn</legend>
-                <label>Usuario:
-                    <input type="text" name="input_user" placeholder="marcos_martinez" size="40" maxlength="40" required>
-                </label>
+            <p>
+                <label for="input_edad">Edad:</label>
+                <input type="number" name="input_age" id="input_edad" maxlength="3" required>
+            </p>
 
-                <label>Password:
-                    <input type="password" name="input_password" size="40" maxlength="40" required>
-                </label>
+            <p>
+                <label for="input-email">Email:</label>
+                <input type="email" name="input_mail" id="input-email" placeholder="example@gmail.com" size="40" maxlength="40" required>
+            </p>
+        </fieldset>
 
-                <label>Confirmar Password:
-                    <input type="password" name="input_confirm_password" size="40" maxlength="40" required>
-                </label>
-            </fieldset>
+        <fieldset>
+            <legend>Información LogIn</legend>
 
-            <fieldset>
-                <legend>Información extra</legend>
-                <label> Tipo de servicio:
-                    <select name="input_service_type" required>
-                        <option value="free">Free</option>
-                        <option value="standard">Standard</option>
-                        <option value="premium">Premium</option>
-                    </select>
-                </label>
+            <p>
+                <label for="input-usuario">Usuario:</label>
+                <input type="text" name="input_user" id="input-usuario" placeholder="marcos_martinez" size="40" maxlength="40" required>
+            </p>
 
-                <label>Tema:
-                    <input type="checkbox" name="tema1" value="politica">Política
-                    <input type="checkbox" name="tema2" value="negocios">Negocios
-                    <input type="checkbox" name="tema3" value="tecnologia">Tecnología
-                    <input type="checkbox" name="tema4" value="salud">Salud
-                </label>
+            <p>
+                <label for="input-password">Password:</label>
+                <input type="password" name="input_password" id="input-password" size="40" maxlength="40" required>
+            </p>
 
-                <label>Agregue un comentario:
-                    <textarea name="comment" maxlength="500" rows="5">Escriba un comentario...</textarea>
-                </label>
-            </fieldset>
+            <p>
+                <label for="input-password-confirm">Confirmar Password:</label>
+                <input type="password" name="input_confirm_password" id="input-password-confirm" size="40" maxlength="40" required>
+            </p>
+        </fieldset>
 
-            <button type="button">Enviar</button>
-        </form>
-    </body>
+        <fieldset>
+            <legend>Información extra</legend>
+
+            <p>
+                <label for="input_service_type">Tipo de servicio:</label>
+                <select name="input_service_type" id="input_service_type" required>
+                    <option value="free" id="option-free">Free</option>
+                    <option value="standard" id="option-standard">Standard</option>
+                    <option value="premium" id="option-premium">Premium</option>
+                </select>
+            </p>
+
+            <p>Tema:
+                <input type="checkbox" name="tema1" id="tema1" value="politica">
+                <label for="tema1">Política</label>
+
+                <input type="checkbox" name="tema2" id="tema2" value="negocios">
+                <label for="tema2">Negocios</label>
+
+                <input type="checkbox" name="tema3" id="tema3" value="tecnologia">
+                <label for="tema3">Tecnología</label>
+
+                <input type="checkbox" name="tema4" id="tema4" value="salud">
+                <label for="tema4">Salud</label>
+            </p>
+
+            <p>
+                <label for="comment">Agregue un comentario:</label>
+                <textarea name="comment" id="comment" maxlength="500" rows="5">Escriba un comentario...</textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+    </form>
+</body>
 </html>
