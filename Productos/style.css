@@ -1,0 +1,57 @@
+:root {
+    --primary-color: #05f;
+    --on-primary: #eee;
+    --primary-color-alpha: #05f9
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    grid-area: auto;
+}
+
+main div {
+    border: 1px solid #222;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+}
+
+div img {
+    width: 100%;
+    height: 200px;
+    
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: nav; }
+.item4 { grid-area: menu-later; }
+.item3 { grid-area: main; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "menu-lateral main main main"
+    "footer footer footer footer";
+}
+
+header {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--on-primary);
+    background-color: var(--primary-color);
+    padding: 5px;
+    transition: background-color 0.8s linear 0.2s;
+    margin: 10px 0;
+}
+
+a:hover {
+    background-color: var(--primary-color-alpha);
+}
