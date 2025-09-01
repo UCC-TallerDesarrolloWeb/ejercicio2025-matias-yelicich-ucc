@@ -13,7 +13,17 @@
             border-radius: 10px;
             box-shadow: 10px 5px #03f
         }
+        #main_div {
+            background-color: #0ef;
+            position: fixed;
+            width: 100%;
+        }
+        #second_div {
+            margin-top: 100px;
+        }
         #icono-usuario {
+            margin: 0 auto;
+            padding: 0;
             width: 15%; 
             float: left;
             border-radius: 50%;
@@ -28,14 +38,16 @@
         }
     </style>
 </head>
-<body>
-    <div>
-        <h1>Nombre Alumno</h1>
-        <h2>Ing. en Computacion</h2>
-        <img src="imagenes/icono_usuario.jpg" alt="Foto de la persona" id="icono-usuario"> 
-    </div>
+<body
+    <div id="main_div">
+        <img src="./imagenes/icono_usuario.jpg" alt="Foto de Andres Romanutti" id="icono-usuario"/>
+        <div class="info">
+            <h1>Nombre Alumno</h1>
+            <h2>Ing. en Informatica</h2>
+        </div>
+    </div>
 
-    <div>
+    <div id="second_div">
         <h3 class="titulo">Datos Personales</h3>
         <p><span>Fecha de Nacimiento:</span> dd/mm/aaaa</p>
         <p><span>Email:</span> email@email.com</p>
