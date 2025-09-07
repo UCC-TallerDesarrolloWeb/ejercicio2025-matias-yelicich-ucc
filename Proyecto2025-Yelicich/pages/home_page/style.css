@@ -1,12 +1,22 @@
-/*
-YM-Primary: #2A94D5 (azul principal, ya definido antes).
-YM-OnPrimary: #FFFFFF (texto blanco sobre azul).
-YM-Background: #F9FAFB (gris muy clarito, casi blanco → más suave que #EDEDED).
-YM-OnBgVariant: #6B6B6B (gris medio para texto secundario, más elegante que #707070).
-YM-Surface: #FFFFFF (tarjetas, contenedores).
-YM-OnSurface: #212121 (texto principal).
-YM-Accent: #F43F5E (rojo para alertas o precios especiales).
-*/
+:root {
+  /* Colores base */
+    --ym-primary: #2A94D5;
+    --ym-primary-light: #CDEFFC;
+    --ym-primary-dark: #2378AB;
+    --ym-accent: #F43F5E;
+
+  /* Fondo y superficies */
+    --ym-background: #F9FAFB;
+    --ym-surface: #FFFFFF;
+
+  /* Texto */
+    --ym-on-primary: #FFFFFF;
+    --ym-on-surface: #212121;
+    --ym-on-bg-variant: #6B6B6B;
+
+  /* Tipografía */
+    --ym-font-main: 'Quicksand', sans-serif;
+}
 
 .bold {
     font-weight: 700;
@@ -62,18 +72,33 @@ h1 {
 #header-buttons {
     display: flex;
     align-items: center;
-    gap: 8px;
+    
+    gap: 16px;
     padding: 16px;
 }
 
-#header-buttons a {
+#header-buttons a:nth-child(-n+3) {
     text-decoration: none;
-    color: #FFF;
+    color: var(--ym-on-primary);
+    letter-spacing: 2px;
 }
 
-#header-buttons a:hover {
+#header-buttons a:nth-child(-n+3):hover {
     text-decoration: underline;
-    color: #FFF;
+    color: var(--ym-primary-light);
+}
+
+#btn-catalogo {
+    text-decoration: none;
+    color: var(--ym-on-primary);
+    background-color: var(--ym-primary);
+    padding: 8px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+#btn-catalogo:hover {
+    background-color: var(--ym-primary-dark);
 }
 
 .hero {
