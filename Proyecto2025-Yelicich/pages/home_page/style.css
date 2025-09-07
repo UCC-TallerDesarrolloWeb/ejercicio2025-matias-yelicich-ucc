@@ -28,6 +28,8 @@ body {
     background-color: var(--ym-background);
 }
 
+/* ---- HEADER SECTION --- */
+
 header {
     height: 80px;
     width: 100%;  
@@ -104,6 +106,8 @@ h1 {
 #btn-catalogo:hover {
     background-color: var(--ym-primary-dark);
 }
+
+/* ---- HERO SECTION --- */
 
 .hero {
     width: 100vw;
