@@ -62,8 +62,11 @@ const productos = [
   },
 ];
 
-let mostrarDetalles = () => {
+let mostrarDetalles = (id) => {
   document.getElementById("detalles").style.display = "block";
+  document.getElementById("detalles__titulo").innerText = productos[id].nombre;
+  document.getElementById("detalles__descripcion").innerText = productos[id].description;
+  document.getElementById("detalles__precio").innerText = `$${productos[id].precio}`;
 }
 
 let cerrarModal = () => {
@@ -73,12 +76,12 @@ let cerrarModal = () => {
 let mostrarCatalogo = () => {
   let contenido = "";
 
-  productos.forEach((prod) => {
+  productos.forEach((prod, id) => {
     contenido += `
       <div>
         <img src="imagenes/${prod.imagen}" alt="${prod.nombre}" />
         <h3>${prod.nombre}</h3>
-        <button type="button" onclick="mostrarDatalles()">Ver Detalles</button>
+        <button type="button" onclick="mostrarDetalles(${id})">Ver Detalles</button>
       </div>
     `;
   })
