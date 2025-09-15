@@ -1,6 +1,6 @@
 /**
  * Permite convertir unidades entre metros, pies, pulgadas y yardas.
- * @method Nombre Convertir Unidaes
+ * @method convertirUnidades Convertir Unidaes
  * @param {String} unidad - Unidad ingresada: metro, pie, pulgasa, yarda
  * @param {Int} valor - valor numerico ingresado por le usuarios (puede ser con coma)
  */
@@ -44,4 +44,23 @@ function convertirUnidades(unidad, valor) {
     document.getElementById("pie").value = pie
     document.getElementById("pulgada").value = pulgada
     document.getElementById("yarda").value = yarda
+}
+
+/**
+ * Permite convertir unidades entre grados y radianes.
+ * @method convertirGR Convertir Unidaes
+ * @param {String} id - Id de la unidad ingresada: grados o radianes
+ * @param {Int} valor - valor numerico ingresado por le usuarios (puede ser con coma)
+ */
+let convertirGR = (id, value) => {
+    let cantGrados, cantRadianes;
+    if(id=="grados") {
+        cantGrados = value;
+        cantRadianes = cantGrados*Math.PI/180
+        document.getElementById("radianes").value = cantRadianes
+    } else {
+        cantRadianes = value;
+        cantGrados = cantRadianes*180/Math.PI
+        document.getElementById("grados").value = cantGrados
+    }
 }
