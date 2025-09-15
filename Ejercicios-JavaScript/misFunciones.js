@@ -1,12 +1,10 @@
 /**
- * Descripción
+ * Permite convertir unidades entre metros, pies, pulgadas y yardas.
  * @method Nombre Convertir Unidaes
- * @param Parámetro unidad - nombre de la unidad
- * @param Parámetro valor - 
- * @return Valor que retorna
+ * @param {String} unidad - Unidad ingresada: metro, pie, pulgasa, yarda
+ * @param {Int} valor - valor numerico ingresado por le usuarios (puede ser con coma)
  */
 function convertirUnidades(unidad, valor) {
-
     let metro, pie, pulgada, yarda;
 
     console.log(valor);
