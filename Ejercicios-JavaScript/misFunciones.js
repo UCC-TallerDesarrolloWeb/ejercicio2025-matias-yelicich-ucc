@@ -10,6 +10,10 @@ let convertirUnidades = (unidad, valor) => {
     console.log(valor);
     console.log(isNaN(valor))
 
+    if(valor.includes(",")) {
+        valor = valor.replace(",", ".");
+    }
+
     if(isNaN(valor)) {
         alert("El valor ingresaod no es un numero valido")
         metro = "";
