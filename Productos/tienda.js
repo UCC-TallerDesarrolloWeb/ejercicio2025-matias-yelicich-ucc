@@ -113,6 +113,7 @@ let mostrarListaCarrito = () => {
     contenido += `
       <div>
         <h3>${productos[num].nombre}</h3>
+        <p>$${productos[num].precio}</p>
       </div>
     `;
   })
