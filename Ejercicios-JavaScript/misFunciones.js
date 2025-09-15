@@ -64,3 +64,17 @@ let convertirGR = (id, value) => {
         document.getElementById("grados").value = cantGrados
     }
 }
+
+/**
+ * Permite mostrar o oculatar un elemento div
+ * @method mostrarOcultarDiv Modificar css
+ * @param {String} id - Id de la unidad ingresada: grados o radianes
+ * @param {Int} valor - valor numerico ingresado por le usuarios (puede ser con coma)
+ */
+let mostrarOcultarDiv = id => {
+    if(id=="mostrarDiv") {
+        document.getElementsByName("unDiv")[0].style.display = "block"
+    } else {
+        document.getElementsByName("unDiv")[0].style.display = "none"
+    }
+}
