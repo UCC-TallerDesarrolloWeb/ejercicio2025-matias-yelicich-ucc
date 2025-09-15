@@ -4,7 +4,7 @@
  * @param {String} unidad - Unidad ingresada: metro, pie, pulgasa, yarda
  * @param {Int} valor - valor numerico ingresado por le usuarios (puede ser con coma)
  */
-function convertirUnidades(unidad, valor) {
+let convertirUnidades = (unidad, valor) => {
     let metro, pie, pulgada, yarda;
 
     console.log(valor);
