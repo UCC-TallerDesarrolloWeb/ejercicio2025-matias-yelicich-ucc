@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Catalogo Taekwondo</title>
+    <script type="text/javascript" src="tienda.js"></script>
+    <title>Catalogo Tesla</title>
 </head>
 <body class="grid-container">
     <header class="item1">
@@ -48,29 +49,35 @@
         </fieldset>
     </aside>
     <main class="item4">
+        <dialog id="detalles">
+            <h2>Detalle del producto</h2>
+            <h3>Cabezal Cerrado</h3>
+            <button type="button" onclick="cerrarModal()">Cerrar</button>
+        </dialog>
         <div>
             <img src="imagenes/model-s.jpg" alt="Model S">
-            Model S
+            <h3>Model S</h3>
+            <button type="button" onclick="mostrarDatalles()">Ver Detalles</button>
         </div>
         <div>
             <img src="imagenes/model-3.jpg" alt="Model 3">
-            Model 3
+            <h3>Model 3</h3>
         </div>
         <div>
             <img src="imagenes/model-x.jpg" alt="MOdel X">
-            Model X
+            <h3>Model X</h3>
         </div>
         <div>
             <img src="imagenes/model-y.jpg" alt="Model Y">
-            Model Y
+            <h3>Model Y</h3>
         </div>
         <div>
             <img src="imagenes/cybertruck.jpg" alt="Cybetruck">
-            Cybertruck
+            <h3>Cybertruck</h3>
         </div>
         <div>
             <img src="imagenes/tesla-semi.jpg" alt="Semi">
-            Semi
+            <h3>Semi</h3>
         </div>
     </main>
     <footer class="item5">
