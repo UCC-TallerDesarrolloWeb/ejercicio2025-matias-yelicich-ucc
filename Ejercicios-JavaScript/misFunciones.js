@@ -71,10 +71,7 @@ let convertirGR = (id, value) => {
  * @param {String} id - Id de la unidad ingresada: grados o radianes
  * @param {Int} valor - valor numerico ingresado por le usuarios (puede ser con coma)
  */
-let mostrarOcultarDiv = id => {
-    if(id=="mostrarDiv") {
-        document.getElementsByName("unDiv")[0].style.display = "block"
-    } else {
-        document.getElementsByName("unDiv")[0].style.display = "none"
-    }
+let mostrarOcultarDiv = (id) => {
+    const show = id == "mostrarDiv" ? "block" : "none";  
+    document.getElementsByName("unDiv")[0].style.display = show;
 }
