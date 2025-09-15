@@ -82,9 +82,40 @@ let mostrarCatalogo = () => {
         <img src="imagenes/${prod.imagen}" alt="${prod.nombre}" />
         <h3>${prod.nombre}</h3>
         <button type="button" onclick="mostrarDetalles(${id})">Ver Detalles</button>
+        <button type="button" onclick="agregarCarrito(${id})">Agregar al carrito</button>
       </div>
     `;
   })
 
   document.getElementById("lista-productos").innerHTML = contenido;
+}
+
+let agregarCarrito = (id) => {
+  let listCarrito;
+  const listaInicial = JSON.parse(localStorage.getItem("carrito"));
+
+  if(listaInicial==null) {
+    listCarrito = [];
+  } else {
+    listCarrito = listaInicial;
+  }
+
+  listCarrito.push(id);
+  localStorage.setItem("carrito", JSON.stringify(listCarrito));
+} 
+
+let mostrarListaCarrito = () => {
+  let contenido = "";
+
+  const carrito = JSON.parse(localStorage.getItem("carrito"))
+
+  carrito.forEach((num) => {
+    contenido += `
+      <div>
+        <h3>${productos[num].nombre}</h3>
+      </div>
+    `;
+  })
+
+  document.getElementById("carrito").innerHTML = contenido;
 }
