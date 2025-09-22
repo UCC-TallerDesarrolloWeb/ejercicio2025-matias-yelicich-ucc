@@ -81,7 +81,7 @@ let mostrarCatalogo = (prod = productos) => {
         <div>
             <img src="imagenes/${prod.imagen}" alt="${prod.nombre}" />
             <h3>${prod.nombre}</h3>
-            <p>$${prod.precio}</p>
+            <p>${formatPrice(prod.precio)}</p>
             <button type="button" onclick="mostrarDetalles(${id})">Ver Detalles</button>
             <button type="button" onclick="agregarCarrito(${id})">Agregar al carrito</button>
         </div>
@@ -115,7 +115,7 @@ let mostrarListaCarrito = () => {
         contenido += `
         <div>
             <h3>${productos[num].nombre}</h3>
-            <p>$${productos[num].precio}</p>
+            <p>${formatPrice(productos[num].precio)}</p>
             <button type="button" onclick="eliminarProducto(${id})">Eliminar producto</button>
         </div>
         `;
@@ -186,9 +186,20 @@ let filtrarProducto = () => {
         )
     }
 
-    if (marca !== "Todas") {
-        newLista = newLista.filter((prod) => prod.marca === marca);
+    if (marca != "Todas") {
+        newLista = newLista.filter(
+            (prod) => prod.marca.toLowerCase().trim() == marca.toLowerCase().trim()
+        );
     }
 
+
     mostrarCatalogo(newLista)
+}
+
+let formatPrice = (price) => {
+    const numberFormat = new Intl.NumberFormat("es-AR", {
+        currency: "ARS",
+        style: "currency"
+    })
+    return numberFormat.format(price)
 }
