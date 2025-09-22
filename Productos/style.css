@@ -83,3 +83,11 @@ footer {
     size: 20px;
     padding: 64px 0;
 }
+
+#cant-prod {
+    background-color: var(--primary-color);
+    border-radius: 32px;
+    display: inline;
+    color: var(--on-primary);
+    padding: 8px;
+}

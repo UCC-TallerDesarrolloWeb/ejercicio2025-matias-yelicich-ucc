@@ -192,7 +192,6 @@ let filtrarProducto = () => {
         );
     }
 
-
     mostrarCatalogo(newLista)
 }
 
@@ -202,4 +201,14 @@ let formatPrice = (price) => {
         style: "currency"
     })
     return numberFormat.format(price)
+}
+
+let countProds = () => {
+    const carrito = JSON.parse(localStorage.getItem("carrito"))
+
+    let count = carrito.length
+    
+    if (count > 0) {
+        let showNumber = document.getElementById("cant-prod").innerText = count;
+    }
 }
