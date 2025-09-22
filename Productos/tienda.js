@@ -179,7 +179,7 @@ let filtrarProducto = () => {
     entr ? category.push("Entrenamiento") : ""
     dob ? category.push("Dobok") : ""
 
-    if(category) {
+    if(category.length > 0) {
         newLista = newLista.filter(
             (prod) =>
                 category.includes(prod.categoria)
