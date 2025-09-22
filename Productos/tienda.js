@@ -229,6 +229,7 @@ let countProds = () => {
 }
 
 let orderCatalog = (order) => {
+    //Optimizar la funcion
     let newOrder;
 
     switch(order) {
@@ -236,6 +237,7 @@ let orderCatalog = (order) => {
         case "mayor": newOrder = productos.sort((a,b) => b.precio - a.precio); break;
         case "a-z": newOrder = productos.sort((a,b) => a.nombre.localeCompare(b.nombre)); break;
         case "z-a": newOrder = productos.sort((a,b) => b.nombre.localeCompare(a.nombre)); break;
+        default: newOrder = productos.sort((a,b) => a.precio - b.precio); break;
     }
 
     mostrarCatalogo(newOrder)
