@@ -19,17 +19,23 @@
         <fieldset>  
             <legend>Búsqueda</legend>
             <label for="search">Buscar:</label>
-            <input type="text" id="search" name="search" placeholder="Buscar...">
+            <input 
+                type="text" 
+                id="search" 
+                name="search" 
+                placeholder="Buscar..." 
+                onchange="filtrarProducto()"
+            >
         </fieldset>
         <fieldset>
             <legend>Precios</legend>
             <p>
                 <label for="price-min">Minimo:</label>
-                <input type="number" id="price-min" name="price-min" value="0" min="0">
+                <input type="number" id="price-min" name="price-min" min="0" onchange="filtrarProducto()">
             </p>
             <p>
                 <label for="price-max">Máximo:</label>
-                <input type="number" id="price-max" name="price-max" value="0" min="0">
+                <input type="number" id="price-max" name="price-max" min="0" onchange="filtrarProducto()">
             </p>
         </fieldset>
         <fieldset>  
