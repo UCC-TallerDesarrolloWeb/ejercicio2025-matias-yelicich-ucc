@@ -147,12 +147,15 @@ let eliminarProducto = (id) => {
 }
 
 let filtrarProducto = () => {
+    //Mejor y optimizar esta funcion (4 funciones) - mas atomicas
+
     let searchWord = document.getElementById("search").value;
     let min = document.getElementById("price-min").value;
     let max = document.getElementById("price-max").value;
     let prot = document.getElementById("protectores").checked;
     let entr = document.getElementById("entrenamiento").checked;
     let dob = document.getElementById("dobok").checked;
+    let marca = document.getElementById("marca").value;
 
     let newLista = productos;
 
@@ -165,13 +168,27 @@ let filtrarProducto = () => {
     }
     
     if(min) {
-        newLista = newLista.filter((prod) => prod.precio >= min)
+        newLista = newLista.filter((prod) => prod.precio >= Number(min))
     }
     if(max) {
-        newLista = newLista.filter((prod) => prod.precio <= max)
+        newLista = newLista.filter((prod) => prod.precio <= Number(min))
     }
 
-    
+    let category = []
+    prot ? category.push("Protectores") : ""
+    entr ? category.push("Entrenamiento") : ""
+    dob ? category.push("Dobok") : ""
+
+    if(category) {
+        newLista = newLista.filter(
+            (prod) =>
+                category.includes(prod.categoria)
+        )
+    }
+
+    if (marca !== "Todas") {
+        newLista = newLista.filter((prod) => prod.marca === marca);
+    }
 
     mostrarCatalogo(newLista)
 }
