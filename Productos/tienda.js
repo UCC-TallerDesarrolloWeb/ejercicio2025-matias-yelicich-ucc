@@ -91,32 +91,56 @@ let mostrarCatalogo = () => {
 }
 
 let agregarCarrito = (id) => {
-  let listCarrito;
-  const listaInicial = JSON.parse(localStorage.getItem("carrito"));
+    let listCarrito;
+    const listaInicial = JSON.parse(localStorage.getItem("carrito"));
 
-  if(listaInicial==null) {
-    listCarrito = [];
-  } else {
-    listCarrito = listaInicial;
-  }
+    if(listaInicial==null) {
+        listCarrito = [];
+    } else {
+        listCarrito = listaInicial;
+    }
 
-  listCarrito.push(id);
-  localStorage.setItem("carrito", JSON.stringify(listCarrito));
+    listCarrito.push(id);
+    localStorage.setItem("carrito", JSON.stringify(listCarrito));
 } 
 
 let mostrarListaCarrito = () => {
-  let contenido = "";
+    let contenido = "";
 
-  const carrito = JSON.parse(localStorage.getItem("carrito"))
+    const carrito = JSON.parse(localStorage.getItem("carrito"))
 
-  carrito.forEach((num) => {
-    contenido += `
-      <div>
-        <h3>${productos[num].nombre}</h3>
-        <p>$${productos[num].precio}</p>
-      </div>
-    `;
-  })
+    if(carrito!=null) {
+    carrito.forEach((num, id) => {
+        contenido += `
+        <div>
+            <h3>${productos[num].nombre}</h3>
+            <p>$${productos[num].precio}</p>
+            <button type="button" onclick="eliminarProducto(${id}})">Eliminar producto</button>
+        </div>
+        `;
+    })
 
-  document.getElementById("carrito").innerHTML = contenido;
+    contenido += `<button type=button onclick="vaciarCarrito()"> Vaciar carrito</button>`
+
+    document.getElementById("carrito").innerHTML = contenido;
+    }
+}
+
+let vaciarCarrito = () => {
+    localStorage.removeItem("carrito")
+    window.location.reload()
+}
+
+let eliminarProducto = (id) => {
+    const carrito = JSON.parse(localStorage.getItem("carrito")); 
+
+    carrito.splice(id, 1);
+    
+    if(carrito.length > 0) {
+        localStorage.setItem("carrito", JSON.stringify(carrito))
+    } else {
+        localStorage.removeItem("carrito")
+    }
+
+    window.location.reload()
 }
