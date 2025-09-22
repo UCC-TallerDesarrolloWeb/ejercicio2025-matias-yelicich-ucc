@@ -204,11 +204,9 @@ let formatPrice = (price) => {
 }
 
 let countProds = () => {
-    const carrito = JSON.parse(localStorage.getItem("carrito"))
-
-    let count = carrito.length
+    const carrito = localStorage.getItem("carrito")
     
-    if (count > 0) {
-        let showNumber = document.getElementById("cant-prod").innerText = count;
+    if (carrito != null > 0) {
+        let showNumber = document.getElementById("cant-prod").innerText = JSON.parse(carrito).length;
     }
 }
