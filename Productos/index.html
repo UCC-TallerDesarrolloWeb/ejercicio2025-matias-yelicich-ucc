@@ -61,6 +61,13 @@
                 <option value="Daedo">Daedo</option>
             </select>
         </fieldset>
+        <select id="order" onchange="orderCatalog(this.value)">
+            <option disabled value="">Seleccione un orden</option>
+            <option value="menor">Precio - de menor a mayor</option>
+            <option value="mayor">Precio - de mayor a menor</option>
+            <option value="a-z">Nombre - de la A a la Z</option>
+            <option value="z-a">Nombre - de la Z a la A</option>
+        </select>
     </aside>
 
     <dialog id="detalles">
@@ -74,8 +81,5 @@
     <main class="item4" id="lista-productos">
         <!-- Contenido generado dinamicamente -->
     </main>
-    <footer class="item5">
-        Info de contacto
-    </footer>
 </body>
 </html>

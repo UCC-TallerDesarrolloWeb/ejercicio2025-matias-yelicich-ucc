@@ -58,7 +58,6 @@ a:hover {
 }
 
 main {
-    min-height: 100dvh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
@@ -77,12 +76,8 @@ div img {
     height: 200px;
 }
 
-footer {
-    background-color: var(--footer-color);
-    color: var(--on-footer);
-    text-align: center;
-    size: 20px;
-    padding: 64px 0;
+fieldset {
+    border: 1px #05f;
 }
 
 #cant-prod {

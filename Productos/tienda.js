@@ -116,7 +116,7 @@ let mostrarListaCarrito = () => {
         const listCant = []
 
         carrito.forEach((num) => {
-            if(listProd.includes(num)) {
+            if(!listProd.includes(num)) {
                 listProd.push(num)
                 listCant.push(1)
             } else {
@@ -226,4 +226,17 @@ let countProds = () => {
     if (carrito != null > 0) {
         let showNumber = document.getElementById("cant-prod").innerText = JSON.parse(carrito).length;
     }
+}
+
+let orderCatalog = (order) => {
+    let newOrder;
+
+    switch(order) {
+        case "menor": newOrder = productos.sort((a,b) => a.precio - b.precio); break;
+        case "mayor": newOrder = productos.sort((a,b) => b.precio - a.precio); break;
+        case "a-z": newOrder = productos.sort((a,b) => a.nombre.localeCompare(b.nombre)); break;
+        case "z-a": newOrder = productos.sort((a,b) => b.nombre.localeCompare(a.nombre)); break;
+    }
+
+    mostrarCatalogo(newOrder)
 }
