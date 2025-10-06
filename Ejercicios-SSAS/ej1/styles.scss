@@ -1,7 +1,22 @@
-$primary-color: #ccc;
-$on-primary: green;
+@use 'variables';
+@use 'anidacion';
 
 body {
-    background: $primary-color;
-    color: $on-primary;
+    background: variables.$primary-color;
+}
+
+@mixin custom_box($bg_color: White, $txt_color: variables.$on-surface) {
+    background-color: $bg_color;
+    border: 4px solid black;
+    box-shadow: 0 0 2px black;
+    color: $txt_color;
+    margin: 20px;
+}
+
+.caja {
+    @include custom_box()
+}
+
+.caja-secundaria {
+    @include custom_box($bg_color: orange, $txt_color: red)
 }
