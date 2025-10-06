@@ -1,3 +1,7 @@
+$primary-color: #ccc;
+$on-primary: green;
+
 body {
-    background: red;
+    background: $primary-color;
+    color: $on-primary;
 }
