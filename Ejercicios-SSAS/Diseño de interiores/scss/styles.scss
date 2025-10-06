@@ -7,6 +7,7 @@ $font-stach: "Montserrat", "sans-serif";
 * {
     margin: 0;
     padding: 0;
+    font-family: $font-stach;
 }
 
 body {
@@ -96,8 +97,9 @@ a {
 #features {
     .container {
         display: grid;
-        
-        grid-template-columns: repeat(2, 1fr);
+        @media(width>=700px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
         padding: 20px 0;
         img {
             width: 100%;
