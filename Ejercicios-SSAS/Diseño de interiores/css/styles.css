@@ -77,15 +77,15 @@ a {
 #navbar .container .logo img {
   height: 50px;
 }
-#navbar .container .ul {
+#navbar .container ul {
   display: flex;
   list-style: none;
 }
-#navbar .container .ul li {
+#navbar .container ul li {
   margin-left: 40px;
   text-transform: uppercase;
 }
-#navbar .container .ul li a {
+#navbar .container ul li a {
   color: #000;
 }
 
