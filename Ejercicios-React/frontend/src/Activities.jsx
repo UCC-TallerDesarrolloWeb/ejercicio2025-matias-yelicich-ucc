@@ -1,4 +1,4 @@
-import './styles/activiies.scss'
+import './styles/activities.scss'
 const Activities = () => {
     const activities = [
         {
