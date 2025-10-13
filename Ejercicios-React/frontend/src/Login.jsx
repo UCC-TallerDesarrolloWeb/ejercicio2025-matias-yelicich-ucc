@@ -25,7 +25,7 @@ const Login = () => {
                     type="text" 
                     placeholder="Usuario" 
                     value={usuario} 
-                    onChage={(e) => setUsuario(e.target.value)} 
+                    onChange={(e) => setUsuario(e.target.value)} 
                     required
                 />
                 <label htmlFor="pass">Contraseña:</label>
@@ -34,7 +34,7 @@ const Login = () => {
                     type="text"
                     placeholder="Constraseña"
                     value={password}
-                    onChage={(e) => setPassword(e.target.value)} 
+                    onChange={(e) => setPassword(e.target.value)} 
                     required
                 />
                 <button type="submit">Ingresar</button>
