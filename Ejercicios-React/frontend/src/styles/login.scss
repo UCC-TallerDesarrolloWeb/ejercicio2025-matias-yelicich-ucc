@@ -12,14 +12,14 @@
     bottom: 1px black solid;
     padding: 2rem;
     box-shadow: 0 0 12px black;
-}
 
-.login-form input {
-    border-radius: 4px;
-    display: block;
-    margin: 1rem auto;
-}
+    input {
+        border-radius: 4px;
+        display: block;
+        margin: 1rem auto;
+    }
 
-.login-form button {
-    background-color: gray;
+    button {
+        background-color: gray;
+    }
 }
