@@ -1,10 +1,11 @@
 import tkdimg from '../assets/home/taekwon.jpg';
 import yogaimg from '../assets/home/yoga.jpg';
+import "@style/home.scss"
 
 const Home = () => {
 
     return (
-        <div>
+        <div className="card-home">
             <h2>En esta página hay información del GYM</h2>
             <div>
                 <img src="/home/funcional.jpg" alt="Funcional" />
