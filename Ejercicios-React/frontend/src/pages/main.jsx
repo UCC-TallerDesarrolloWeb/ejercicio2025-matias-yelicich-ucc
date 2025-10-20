@@ -5,7 +5,7 @@ import './styles/index.css'
 import App from './App.jsx'
 import Login from './Login.jsx'
 import Activities from './Activities.jsx'
-import Layout from './Layout.jsx';
+import Layout from './Layout.js';
 import Home from './Home.jsx';
 
 createRoot(document.getElementById('root')).render(
