@@ -18,7 +18,7 @@ const Header = () => {
                     isLoggedIn ? (
                         <button onClick={logout}>Cerrar sesión</button>
                     ) : (
-                        <a href="/login">Logout</a>
+                        <a href="/login">Login</a>
                     )
                 }
 
