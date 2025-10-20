@@ -35,8 +35,8 @@ const Login = () => {
                 <label htmlFor="pass">Contraseña:</label>
                 <input 
                     id="pass"
-                    type="text"
-                    placeholder="Constraseña"
+                    type="password"
+                    placeholder="Contraseña"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)} 
                     required
