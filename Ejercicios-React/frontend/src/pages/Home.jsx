@@ -1,12 +1,10 @@
-import tkdimg from '../assets/home/taekwon.jpg';
-import yogaimg from '../assets/home/yoga.jpg';
-import "@style/home.scss"
+import tkdImg from "../assets/home/taekwondo.jpg"
+import yogaImg from "../assets/home/yoga.webp";
+import "@styles/home.scss";
 
 const Home = () => {
-
     return (
         <div className="card-home">
-            <h2>En esta página hay información del GYM</h2>
             <div>
                 <img src="/home/funcional.jpg" alt="Funcional" />
                 <h2>Funcional</h2>
@@ -16,11 +14,11 @@ const Home = () => {
                 <h2>Zumba</h2>
             </div>
             <div>
-                <img src={tkdimg} alt="Taekwon" />
-                <h2>Taekwon</h2>
+                <img src={tkdImg} alt="taekwondo" />
+                <h2>Taekwondo</h2>
             </div>
             <div>
-                <img src={yogaimg} alt="Yoga" />
+                <img src={yogaImg} alt="yoga" />
                 <h2>Yoga</h2>
             </div>
         </div>
