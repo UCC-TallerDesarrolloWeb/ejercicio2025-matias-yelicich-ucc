@@ -1,11 +1,17 @@
 const Header = () => {
 
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
     return (
         <header>
             <h1>GYM</h1>
             <nav>
                 <a href="/">Home</a>
-                <a href="/login">Login</a>
+                isLoggedIn && (
+                    <a href="/logout">Login</a>
+                ) : (
+                    <a href="/login">Logout</a>
+                )
                 <a href="/actividades">Actividades</a>
             </nav>
         </header>
